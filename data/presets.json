@@ -1,0 +1,162 @@
+{
+  "presets": [
+    {
+      "id": "my_bucket2",
+      "label": "My Bucket 2 (BTC/SOL/SPY/MSFT/NVDA)",
+      "description": "Default preset reflecting a BTC-dominant crypto core, SOL satellite, SPY stability anchor, and MSFT/NVDA AI-theme growth compounders. Assumptions are intended for long-term stochastic simulations and can be customized.",
+      "portfolio": {
+        "name": "Bucket 2 - US/Crypto",
+        "currency": "USD",
+        "rebalance_frequency": "Annual",
+        "assets": [
+          {
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "asset_class": "Crypto",
+            "allocation_pct": 0.45,
+            "initial_price": 30000,
+            "current_price": 108000,
+            "starting_holdings": 0.0,
+            "weekly_dca": 50,
+            "monthly_dca": 0,
+            "annual_dca_increase_pct": 0.36,
+            "return_model": "regime",
+            "expected_return": 0.35,
+            "volatility": 0.45,
+            "regimes": [
+              {
+                "name": "Bear",
+                "probability": 0.20,
+                "expected_return": -0.20,
+                "volatility": 0.35
+              },
+              {
+                "name": "Base",
+                "probability": 0.55,
+                "expected_return": 0.35,
+                "volatility": 0.45
+              },
+              {
+                "name": "Bull",
+                "probability": 0.25,
+                "expected_return": 0.80,
+                "volatility": 0.70
+              }
+            ]
+          },
+          {
+            "name": "Solana",
+            "symbol": "SOL",
+            "asset_class": "Crypto",
+            "allocation_pct": 0.05,
+            "initial_price": 20,
+            "current_price": 150,
+            "starting_holdings": 0.0,
+            "weekly_dca": 10,
+            "monthly_dca": 0,
+            "annual_dca_increase_pct": 0.36,
+            "return_model": "regime",
+            "expected_return": 0.40,
+            "volatility": 0.75,
+            "regimes": [
+              {
+                "name": "Failure",
+                "probability": 0.20,
+                "expected_return": -0.80,
+                "volatility": 0.90
+              },
+              {
+                "name": "Weak",
+                "probability": 0.25,
+                "expected_return": -0.20,
+                "volatility": 0.70
+              },
+              {
+                "name": "Base",
+                "probability": 0.35,
+                "expected_return": 0.40,
+                "volatility": 0.75
+              },
+              {
+                "name": "Bull",
+                "probability": 0.15,
+                "expected_return": 1.20,
+                "volatility": 1.10
+              },
+              {
+                "name": "Moon",
+                "probability": 0.05,
+                "expected_return": 3.00,
+                "volatility": 1.80
+              }
+            ]
+          },
+          {
+            "name": "S&P 500 ETF",
+            "symbol": "SPY",
+            "asset_class": "ETF",
+            "allocation_pct": 0.20,
+            "initial_price": 400,
+            "current_price": 560,
+            "starting_holdings": 0.0,
+            "weekly_dca": 30,
+            "monthly_dca": 0,
+            "annual_dca_increase_pct": 0.36,
+            "return_model": "lognormal",
+            "expected_return": 0.09,
+            "volatility": 0.16,
+            "regimes": []
+          },
+          {
+            "name": "Microsoft",
+            "symbol": "MSFT",
+            "asset_class": "Stock",
+            "allocation_pct": 0.15,
+            "initial_price": 300,
+            "current_price": 460,
+            "starting_holdings": 0.0,
+            "weekly_dca": 20,
+            "monthly_dca": 0,
+            "annual_dca_increase_pct": 0.36,
+            "return_model": "lognormal",
+            "expected_return": 0.13,
+            "volatility": 0.24,
+            "regimes": []
+          },
+          {
+            "name": "NVIDIA",
+            "symbol": "NVDA",
+            "asset_class": "Stock",
+            "allocation_pct": 0.15,
+            "initial_price": 45,
+            "current_price": 140,
+            "starting_holdings": 0.0,
+            "weekly_dca": 15,
+            "monthly_dca": 0,
+            "annual_dca_increase_pct": 0.36,
+            "return_model": "lognormal",
+            "expected_return": 0.18,
+            "volatility": 0.45,
+            "regimes": []
+          }
+        ],
+        "correlation": {
+          "order": [
+            "BTC",
+            "SOL",
+            "SPY",
+            "MSFT",
+            "NVDA"
+          ],
+          "matrix": [
+            [1.00, 0.80, 0.20, 0.20, 0.25],
+            [0.80, 1.00, 0.15, 0.15, 0.20],
+            [0.20, 0.15, 1.00, 0.80, 0.70],
+            [0.20, 0.15, 0.80, 1.00, 0.75],
+            [0.25, 0.20, 0.70, 0.75, 1.00]
+          ]
+        }
+      }
+    }
+  ]
+}
