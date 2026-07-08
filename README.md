@@ -1,4 +1,4 @@
-# Polaris: Monte Carlo Portfolio Simulator
+# 🌟 Polaris: Monte Carlo Portfolio Simulator
 ### v1 – Core
 
 > A desktop application for probabilistic portfolio analysis using **Monte Carlo simulation**, **correlated asset modeling**, and **dynamic DCA schedules**.
