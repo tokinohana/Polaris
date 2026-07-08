@@ -3,3 +3,4 @@ scipy>=1.11
 pandas>=2.1
 matplotlib>=3.8
 ttkbootstrap>=1.10
+yfinance>=1.5.1
